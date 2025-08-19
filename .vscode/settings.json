@@ -1,0 +1,6 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "svg.preview.background": "transparent"
+}
