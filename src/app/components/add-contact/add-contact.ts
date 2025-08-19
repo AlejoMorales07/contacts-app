@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { Modal } from './modal/modal';
+import { Contact } from '../../services/contact.service';
 
 @Component({
   selector: 'app-add-contact',
@@ -18,9 +19,16 @@ export class AddContact {
     });
 
     dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
       if (result !== undefined) {
+        window.location.reload();
       }
+    });
+  }
+
+  // Reutilizar el modal existente para edición
+  openEditModal(contact: Contact): void {
+    const dialogRef = this.dialog.open(Modal, {
+      data: { contact, isEdit: true },
     });
   }
 }

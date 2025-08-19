@@ -37,7 +37,7 @@ export class Modal {
   add() {
     if (this.contact.name && this.contact.phone) {
       this.contactService.addContact({ ...this.contact });
-      this.dialogRef.close();
+      this.dialogRef.close(this.contact);
       this.contact = {
         id: 0,
         name: '',
