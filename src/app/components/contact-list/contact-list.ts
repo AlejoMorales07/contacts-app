@@ -19,7 +19,7 @@ import { Contact, ContactService } from '../../services/contact.service';
     MatIconModule,
   ],
   templateUrl: './contact-list.html',
-  styleUrl: './contact-list.scss',
+  styleUrls: ['./contact-list.scss'],
 })
 export class ContactList implements OnInit {
   contacts: Contact[] = [];

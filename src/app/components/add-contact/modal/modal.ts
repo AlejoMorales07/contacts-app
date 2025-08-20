@@ -25,7 +25,7 @@ import { ContactService } from '../../../services/contact.service';
     //MatDialogClose,
   ],
   templateUrl: './modal.html',
-  styleUrl: './modal.scss',
+  styleUrls: ['./modal.scss'],
 })
 export class Modal {
   contact = { id: 0, name: '', phone: '', email: '' };
